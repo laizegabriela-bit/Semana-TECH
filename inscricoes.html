@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas inscrições - Semana Tech 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="inscricoes.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+
+        <button id="mudarTema" onclick="mudarTema()">
+            Mudar tema
+        </button>
+
+        <div>
+            <p class="evento">SEMANA TECH 2026</p>
+            <h1>Minhas inscrições</h1>
+        </div>
+
+       <section>
+            <button class="botao-menu" onclick="abrirMenu()"> ≡ Menu</button>
+            
+            <nav id="menu">
+                <a href="index.html" class="voltar">Oficinas</a>
+                <a href="inscricoes.html" class="link-inscricoes" id="botaoInscricoes">inscricoes</a>
+                <a href="minha_conta.html" class="meu-perfil">Meu perfil</a>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section id="listaInscricoes" class="lista-inscricoes"></section>
+
+        <section class="resumo">
+            <p>Quantidade de oficinas: <strong id="quantidadeTotal">0</strong></p>
+            <p>Valor total: <strong id="valorTotal">R$ 0,00</strong></p>
+
+            <a href="index.html" class="botao-principal">
+                Voltar para oficinas
+            </a>
+        </section>
+    </main>
+
+    <div id="modalRemover" class="modal">
+        <div class="modal-conteudo">
+            <h2>Remover inscrição</h2>
+
+            <p>Deseja realmente remover esta oficina da sua inscrição?</p>
+
+            <button id="cancelarRemocao">Cancelar</button>
+            <button id="confirmarRemocao">Confirmar remoção</button>
+        </div>
+    </div>
+</body>
+</html>

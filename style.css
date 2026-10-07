@@ -1,0 +1,692 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #202735;
+}
+
+.cabecalho {
+    background: #541717;
+    color: white;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.evento {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+
+.escuro{
+    background-color: #222;
+    color: white;
+}
+
+.escuro section{
+    border-color:#555 ;
+}
+
+.escuro .card{
+    background-color: #541717;
+}
+
+.escuro .vazio{
+    background: #541717;
+}
+
+.escuro .item-inscricao{
+    background: #541717;
+}
+
+.escuro .resumo{
+    background-color: #541717;
+}
+
+#mudarTema{
+    background-color: #541717;
+    border-radius: 15px;
+    border-color: #f5f2f2;
+    color: #f4f7fb;
+}
+
+#menu{
+    display: none;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: white;
+    width: 210px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: #f4f7fb;
+    margin-bottom: 2px;
+}
+
+#menu.aberto{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu a:hover {
+    background: #f1dddd;
+}
+
+.botao-menu{
+    background: #541717;
+    color: white;
+    border-radius: 8px;
+    border-color: #f4f7fb;
+}
+
+.escuro .botao-menu {
+    background: #541717;
+    color: white;
+    border-radius: 8px;
+    border-color: #f4f7fb;
+}
+
+.escuro #menu {
+    background: #541717;
+}
+
+.escuro #menu a {
+    color: #541717;
+}
+
+.escuro #menu a:hover {
+    background: #702222;
+}
+
+.link-inscricoes,
+.voltar, .meu-perfil {
+    background: white;
+    color: #541717;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+main {
+    width: 88%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.introducao h2,
+.carrossel-section h2 {
+    margin-bottom: 8px;
+}
+
+.introducao p {
+    margin-top: 0;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+#busca,
+#ordenar {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+}
+
+#busca {
+    width: min(500px, 100%);
+}
+
+#ordenar {
+    min-width: 180px;
+}
+
+.mensagem {
+    text-align: center;
+    min-height: 20px;
+    font-weight: bold;
+}
+
+.oficinas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.card p {
+    margin: 6px 0;
+}
+
+.valor {
+    font-size: 18px;
+}
+
+.botao-inscrever,
+.botao-principal,
+.botao-remover {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-inscrever {
+    margin-top: auto;
+    background: #eb2525;
+    color: white;
+}
+
+.botao-inscrever:hover {
+    background: #d81d1d;
+}
+
+.botao-inscrever.inscrito {
+    background: #16a34a;
+    cursor: default;
+}
+
+.carrossel-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.janela-slider {
+    width: min(800px, 80vw);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.imagens-slider {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.imagens-slider img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    flex: 0 0 100%;
+}
+
+.controle {
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 50%;
+    background: #541717;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.controle:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* inscrições */
+.lista-inscricoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-inscricao {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.item-inscricao img {
+    width: 110px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.item-info p {
+    margin: 4px 0;
+}
+
+.botao-remover {
+    background: #dc2626;
+    color: white;
+}
+
+.resumo {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.resumo p {
+    font-size: 18px;
+}
+
+.botao-principal {
+    display: inline-block;
+    background: #eb2525;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.vazio {
+    background: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .oficinas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    #busca,
+    #ordenar {
+        width: 100%;
+    }
+
+    .oficinas {
+        grid-template-columns: 1fr;
+    }
+
+    .janela-slider {
+        width: 75vw;
+    }
+
+    .imagens-slider img {
+        height: 220px;
+    }
+
+    .item-inscricao {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .item-inscricao img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .resumo {
+        text-align: center;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-aberta {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+    margin-bottom: 20px;
+}
+
+.modal-conteudo button {
+    margin: 5px;
+}
+
+.escuro .modal-conteudo {
+    background-color: #dc2626;
+    color: white;
+}
+
+#cancelarRemocao, #confirmarRemocao{
+    background: #eb2525;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border-color: #dc2626;   
+}
+
+/* Minha Conta */
+.conta-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.conta-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.conta-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.campo-senha-atividade {
+    display: flex;
+    gap: 8px;
+}
+
+.campo-senha-atividade input {
+    flex: 1;
+}
+
+.campo-senha-atividade button {
+    background: #541717;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.conta-section small {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+}
+
+.valido {
+    color: #16a34a;
+}
+
+.invalido {
+    color: #dc2626;
+}
+
+.perfil-conta {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cbd5e1;
+}
+
+.troca-imagem {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cbd5e1;
+}
+
+.imagem-perfil {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px auto;
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.miniaturas img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #cbd5e1;
+}
+
+.miniaturas img:hover {
+    border-color: #541717;
+}
+
+.aviso-conta {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #16a34a;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    z-index: 50;
+}
+
+.escuro .conta-section {
+    background: #541717;
+}
+
+.escuro .conta-section input {
+    background: #3a1111;
+    color: white;
+    border-color: #973b3b;
+}
+
+.escuro .conta-section input::placeholder {
+    color: #decaca;
+}
+
+.escuro .perfil-conta,
+.escuro .troca-imagem {
+    border-color: #973b3b;
+}
+
+.escuro .campo-senha-atividade button {
+    background: #f8f5f5;
+    color: #541717;
+}
+
+@media (max-width: 650px) {
+    .botao-menu {
+        position: absolute;
+        right: 6%;
+        top: 15px;
+    }
+
+    .menu-atividade {
+        right: 6%;
+        top: 65px;
+    }
+}
+
+#mostrarSenha{
+    background-color: #eb2525;
+    color: white;
+    border-color: #3a1111;
+    border-radius: 8px;
+}
+
+.conta,
+.perfil {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.formulario input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.formulario button {
+    margin-top: 10px;
+}
+
+#validacaoNome,
+#validacaoEmail {
+    margin: 0;
+    font-weight: bold;
+}
+
+#mensagemSucesso {
+    font-weight: bold;
+}
+
+.imagem-principal {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 15px;
+}
+
+.miniaturas img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.escuro .conta,
+.escuro .perfil {
+    background-color: #541717;
+    color: white;
+}
+
+.escuro .formulario input {
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+
+.escuro .formulario input::placeholder {
+    color: #ccc;
+}

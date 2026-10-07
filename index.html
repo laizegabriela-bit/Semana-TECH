@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Tech 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer ></script>
+</head>
+<body>
+    <header class="cabecalho">
+
+        <button id="mudarTema" onclick="mudarTema()">
+            Mudar tema
+        </button>
+
+        <div>
+            <p class="evento">SEMANA TECH 2026</p>
+            <h1>Oficinas</h1>
+        </div>
+
+        <section>
+            <button class="botao-menu" onclick="abrirMenu()"> ≡ Menu</button>
+            
+            <nav id="menu">
+                <a href="index.html" class="voltar">Oficinas</a>
+                <a href="inscricoes.html" class="link-inscricoes" id="botaoInscricoes">inscricoes</a>
+                <a href="minha_conta.html" class="meu-perfil">Meu perfil</a>
+            </nav>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Escolha sua oficina</h2>
+            <p>
+                Pesquise uma oficina pelo nome, organize por valor
+                e faça sua inscrição.
+            </p>
+        </section>
+
+        <section class="filtros">
+            <input
+                type="text"
+                id="busca"
+                placeholder="Buscar oficina..."
+                aria-label="Buscar oficina"
+            >
+
+            <select id="ordenar" aria-label="Ordenar oficinas">
+                <option value="">Selecione</option>
+                <option value="menor">Menor valor</option>
+                <option value="maior">Maior valor</option>
+            </select>
+        </section>
+
+        <p id="mensagemBusca" class="mensagem"></p>
+
+        <section id="oficinas" class="oficinas"></section>
+
+        <section class="carrossel-section">
+            <h2>Conheça a Semana Tech</h2>
+
+            <div class="slider">
+                <button id="anterior" class="controle" aria-label="Imagem anterior">
+                    ◀
+                </button>
+
+                <div class="janela-slider">
+                    <div class="imagens-slider" id="imagensSlider">
+                        <img src="https://images.even3.com/XoYCATIzUasTP8FzyGzCfrJL7mI=/1100x440/smart/https://static.even3.com/banner/LOGOSEMATEC2026.b5672a70c349498087ad.jpeg" alt="">
+                        <img src="https://www.novalima.mg.gov.br/v1/storage/news/novas_vagas_para_escola_de_programacao_e_robotica1743627652954.jpg" alt="">
+                        <img src="https://media.istockphoto.com/id/636060520/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80-%D0%B8-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8.jpg?s=612x612&w=0&k=20&c=rjNyvONqsJRUO8zwQLjW_ejTwM6M8OAw1EKRrEHlW_w=" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr_vQ3dpyyuLBqSE9DBlhsAFU6BQHxBJqMAuwlaFoz0w&s=10" alt="">
+                    </div>
+                </div>
+
+                <button id="proximo" class="controle" aria-label="Próxima imagem">
+                    ▶
+                </button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <script type="text/javascript" src="conta.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+
+        <button id="mudarTema" onclick="mudarTema()">
+            Mudar tema
+        </button>
+
+        <div>
+            <p class="evento">SEMANA TECH 2026</p>
+            <h1>Oficinas</h1>
+        </div>
+
+        <section>
+            <button class="botao-menu" onclick="abrirMenu()"> ≡ Menu</button>
+            
+            <nav id="menu">
+                <a href="index.html" class="voltar">Oficinas</a>
+                <a href="inscricoes.html" class="link-inscricoes" id="botaoInscricoes">inscricoes</a>
+                <a href="minha_conta.html" class="meu-perfil">Meu perfil</a>
+            </nav>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="conta">
+            <h2>Área do Participante</h2>
+
+            <div class="formulario">
+                <label>Nome completo:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                >
+
+                <p id="validacaoNome"></p>
+
+
+                <label>E-mail:</label>
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                >
+
+                <p id="validacaoEmail"></p>
+
+
+                <label>Idade:</label>
+
+                <input
+                    type="number"
+                    id="idade"
+                    placeholder="Digite sua idade"
+                >
+
+
+                <label>Cidade:</label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    placeholder="Digite sua cidade"
+                >
+
+
+                <label>Senha:</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                >
+
+                <button id="mostrarSenha" onclick="mostrarSenha()">
+                    Mostrar / Ocultar senha
+                </button>
+
+
+                <button class="botao-principal" onclick="salvarDados()">
+                    Salvar dados
+                </button>
+
+                <p id="mensagemSucesso"></p>
+
+            </div>
+
+        </section>
+
+
+        <section class="perfil">
+
+            <h2>Meu perfil</h2>
+
+            <p>
+                <strong>Nome:</strong>
+                <span id="perfilNome"></span>
+            </p>
+
+            <p>
+                <strong>E-mail:</strong>
+                <span id="perfilEmail"></span>
+            </p>
+
+            <p>
+                <strong>Idade:</strong>
+                <span id="perfilIdade"></span>
+            </p>
+
+            <p>
+                <strong>Cidade:</strong>
+                <span id="perfilCidade"></span>
+            </p>
+
+        </section>
+
+
+        <section class="perfil">
+
+            <h2>Imagem de perfil</h2>
+
+            <img
+                id="imagemPrincipal"
+                src="image copy 3.png"
+                alt="Imagem de perfil"
+                class="imagem-principal"
+            >
+
+            <div class="miniaturas">
+
+                <img src="image.png" onclick="trocarImagem(this)" alt="Avatar 1">
+
+                <img src="image copy.png" onclick="trocarImagem(this)" alt="Avatar 2">
+
+                <img src="image copy 3.png" onclick="trocarImagem(this)"alt="Avatar 3">
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
